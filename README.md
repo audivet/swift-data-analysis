@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Swift Data Analysis
 
-## Getting Started
+This project is a comprehensive guide to learning Swift, data visualization, machine learning, and financial analysis.
 
-First, run the development server:
+## 🚀 Quick start
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  **Create a Gatsby site.**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    ```bash
+    gatsby new swift-data-analysis https://github.com/gatsbyjs/gatsby-starter-default
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2.  **Start developing.**
 
-## Learn More
+    Navigate into your new site’s directory and start it up.
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    cd swift-data-analysis/
+    gatsby develop
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.  **Open the source code and start editing!**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    Your site is now running at `http://localhost:8000`!
 
-## Deploy on Vercel
+    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧐 What's inside?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+A quick look at the top-level files and directories you'll see in a typical Gatsby project.
+
+    .
+    ├── node_modules
+    ├── src
+    ├── .gitignore
+    ├── gatsby-browser.js
+    ├── gatsby-config.js
+    ├── gatsby-node.js
+    ├── gatsby-ssr.js
+    ├── LICENSE
+    ├── package.json
+    └── README.md
+
+## 🎓 Learning Gatsby
+
+For more detailed documentation, check out the [official Gatsby documentation](https://www.gatsbyjs.com/docs/).
