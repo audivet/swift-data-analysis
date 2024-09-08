@@ -1,0 +1,125 @@
+/* Container for the homepage */
+.homepage-container {
+    text-align: center;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the learn sections (Swift and Python) */
+.homepage-options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+/* Styling for each learn section (Swift and Python) */
+.learn-section {
+    width: 300px;
+}
+
+/* Styling for the buttons */
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Swift button styling */
+.swift-button {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Python button styling */
+.python-button {
+    background-color: #ff7f50;
+    color: white;
+}
+
+/* Hover effect for the buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* List and link styling in the Learn sections */
+.learn-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.learn-section li {
+    margin: 15px 0;
+}
+
+.learn-section li a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.learn-section li a:hover {
+    background-color: #0056b3;
+}
+
+/* Quiz component styling */
+.quiz-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.question-section {
+    margin-bottom: 20px;
+}
+
+.answer-section button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.answer-section button:hover {
+    background-color: #0056b3;
+}
+
+.answer-section button.correct {
+    background-color: #28a745;
+}
+
+.answer-section button.wrong {
+    background-color: #dc3545;
+}
+
+.score-section {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 100%;
+    }
+    
+    .answer-section button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

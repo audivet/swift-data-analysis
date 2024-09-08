@@ -1,11 +1,26 @@
+import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
-import * as React from "react";
+import "./index.css"; // For custom styling
 
 const IndexPage = () => (
   <Layout>
-    <h1>Welcome to Swift Data Analysis</h1>
-    <p>A comprehensive guide to learning Swift, data visualization, machine learning, and financial analysis.</p>
-    <p>Explore the tutorials and start your journey in data analysis with Swift!</p>
+    <div className="homepage-container">
+      <h1>Welcome to the Data Analysis Hub</h1>
+      <p>Choose a learning path to get started:</p>
+      <div className="homepage-options">
+        <div className="section-container">
+          <Link to="/learn-with-swift/">
+            <button className="swift-button">Learn with Swift</button>
+          </Link>
+        </div>
+        <div className="section-container">
+          <Link to="/learn-with-python/">
+            <button className="python-button">Learn with Python</button>
+          </Link>
+        </div>
+      </div>
+    </div>
   </Layout>
 );
 
