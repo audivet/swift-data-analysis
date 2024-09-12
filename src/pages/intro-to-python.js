@@ -21,7 +21,6 @@ const questions = [
       { answerText: "Python Software Foundation", isCorrect: true },
     ],
   },
-  // Add more questions below in the same format
   {
     questionText: "What is the extension of a Python file?",
     answerOptions: [
@@ -41,7 +40,6 @@ const questions = [
     ],
   },
 ];
-
 
 const IntroToPython = () => (
   <Layout>
