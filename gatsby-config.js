@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Data Analytics Fundamentals',
     description: 'A comprehensive guide to data analysis techniques',
+    keywords: ['data analysis', 'data analytics', 'Python', 'Swift', 'machine learning', 'data visualization'],
     author: `@audivet`,
     siteUrl: `https://swift-data-analysis.vercel.app/`,
   },
@@ -31,7 +32,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/gatsby-icon.png`,  // Update icon path if necessary
       },
     },
     {
@@ -44,5 +45,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-RJ0TTLQ4KN",  // Replace with your ID
+        head: true,
+      },
+    },
   ],
-}
+};
