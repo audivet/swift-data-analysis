@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Swift Data Analysis`,
-    description: `A comprehensive guide to learning Swift, data visualization, machine learning, and financial analysis.`,
+    title: 'Data Analytics Fundamentals',
+    description: 'A comprehensive guide to data analysis techniques',
     author: `@audivet`,
     siteUrl: `https://swift-data-analysis.vercel.app/`,
   },
@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Swift Data Analysis`,
-        short_name: `SwiftData`,
+        name: `Data Analytics Fundamentals`,
+        short_name: `DataAnalytics`,
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
