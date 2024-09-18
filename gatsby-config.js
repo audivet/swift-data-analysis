@@ -46,10 +46,19 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-RJ0TTLQ4KN",  // Replace with your ID
-        head: true,
+        trackingIds: [
+          "G-RJ0TTLQ4KN", // Your GA4 Measurement ID
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
       },
     },
   ],
