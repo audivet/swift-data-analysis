@@ -1,12 +1,14 @@
 import React from "react";
-import Navigation from "./navigation";
-import "./layout.css";  // Ensure this line is present
+import Navigation from "./Navigation";  // Ensure this file is correctly named and imported
+import "./layout.css";  // Ensure this CSS file exists in the same folder
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="layout-container">
       <Navigation />
-      <main>{children}</main>
+      <main className="layout-content">
+        {children}
+      </main>
     </div>
   );
 };
