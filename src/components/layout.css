@@ -1,11 +1,11 @@
 :root {
   --border-radius: 4px;
-  --color-background: #f4f4f4; /* Light grey for background */
-  --color-text: #333; /* Dark grey for text */
-  --color-primary: #0056b3; /* Blue for primary elements */
-  --color-accent: #ffcc00; /* Yellow for accent on hover */
-  --color-code-bg: #fff4db; /* Light yellow for code background */
-  --color-code: #8a6534; /* Dark brown for code text */
+  --color-background: #f4f4f4;
+  --color-text: #333;
+  --color-primary: #0056b3;
+  --color-accent: #ffcc00;
+  --color-code-bg: #fff4db;
+  --color-code: #8a6534;
   --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-mono: 'Courier New', Courier, monospace;
   --font-lg: 2.5rem; /* Large font size */
@@ -21,12 +21,21 @@
 }
 
 body {
-  font-family: var(--font-sans);
-  color: var(--color-text);
+  font-family: var(--font-sans); /* Font setting back to preferred style */
   background-color: var(--color-background);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
-  line-height: var(--line-height-normal);
+  line-height: var(--line-height-normal); /* Ensuring normal readability */
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-accent);
 }
 
 h1, h2 {
@@ -42,19 +51,6 @@ h1 {
 h2 {
   font-size: var(--font-md);
   margin-bottom: var(--space-2);
-}
-
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
-}
-
-a:hover {
-  color: var(--color-accent);
 }
 
 ul {
@@ -119,4 +115,39 @@ img {
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+/* Navbar base styles */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Dropdown styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  display: block;
 }

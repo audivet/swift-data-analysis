@@ -1,64 +1,87 @@
 module.exports = {
   siteMetadata: {
-    title: 'Data Analytics Fundamentals',
-    description: 'A comprehensive guide to data analysis techniques',
-    keywords: ['data analysis', 'data analytics', 'Python', 'Swift', 'machine learning', 'data visualization'],
-    author: `@audivet`,
-    siteUrl: `https://swift-data-analysis.vercel.app/`,
+    title: `Data Analytics Fundamentals`,
+    description: `Learn data analytics with Python, Swift, and essential tools like Excel, SQL, and more.`,
+    author: `@yourhandle`,
+    siteUrl: `https://swift-data-analysis-otpd8ti0d-audivets-projects.vercel.app`, // Updated to your real site URL
   },
   plugins: [
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
-      },
-    },
+    `gatsby-plugin-react-helmet`, // For handling dynamic metadata
+
+    // Image-related plugins
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images`, // Ensure images path is correct
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`, // For optimized images
+    `gatsby-transformer-sharp`, // Needed for image transformations
+    `gatsby-plugin-sharp`, // Needed for optimized images
+
+    // Manifest configuration for PWA
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Data Analytics Fundamentals`,
-        short_name: `DataAnalytics`,
+        name: `data-analytics-fundamentals`,
+        short_name: `DAF`,
         start_url: `/`,
-        background_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,  // Update icon path if necessary
+        background_color: `#f7f7f7`,
+        theme_color: `#0056b3`,
+        display: `standalone`,
+        icon: `src/images/gatsby-icon.png`, // Correct icon path
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-code-titles`,
-        ],
-      },
-    },
-    `gatsby-plugin-styled-components`,
+
+    // Sitemap for SEO
+    `gatsby-plugin-sitemap`, 
+
+    // Google Analytics with Google GTag
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-RJ0TTLQ4KN", // Your Google Analytics Measurement ID
+          "G-RJ0TTLQ4KN", // Your Google Analytics tracking ID
         ],
-        gtagConfig: {
-          anonymize_ip: true,
-        },
         pluginConfig: {
           head: true,
-          respectDNT: true,
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
         },
+      },
+    },
+
+    // Font loading optimization
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Roboto",
+              variants: ["400", "500", "700"],
+            },
+            {
+              family: "Open Sans",
+              variants: ["300", "400", "600", "700"],
+            },
+          ],
+        },
+      },
+    },
+
+    // Preload fonts for better performance
+    `gatsby-plugin-preload-fonts`,
+
+    // Offline support and Progressive Web App (PWA) functionality
+    `gatsby-plugin-offline`,
+
+    // Bundle analyzer for optimizing JS bundle
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      options: {
+        analyzerMode: 'static',
+        reportFilename: './report.html',
+        openAnalyzer: true,
       },
     },
   ],
