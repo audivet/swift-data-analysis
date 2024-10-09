@@ -1,8 +1,8 @@
 // src/pages/intro-to-python.js
 
 import React from "react"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from "../components/layout"  // Updated to lowercase
+import Seo from "../components/seo"        // Updated to lowercase
 import QuizComponent from "../components/QuizComponent"
 
 // Define your quiz questions
@@ -47,7 +47,7 @@ const questions = [
 
 const IntroToPython = () => (
   <Layout>
-    <SEO
+    <Seo
       title="Introduction to Python"
       description="Learn the basics of Python programming for data analytics."
     />

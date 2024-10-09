@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Data Analytics Fundamentals`,
     description: `Learn data analytics with Python, Swift, and essential tools like Excel, SQL, and more.`,
-    author: `@yourhandle`,
+    author: `@audivet`,
     siteUrl: `https://swift-data-analysis-otpd8ti0d-audivets-projects.vercel.app`, // Updated to your real site URL
   },
   plugins: [

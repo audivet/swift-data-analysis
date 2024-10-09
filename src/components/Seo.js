@@ -16,8 +16,10 @@ function Seo({ description, title, children }) {
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  // Provide fallbacks if siteMetadata is missing or undefined
+  const metaDescription = description || site?.siteMetadata?.description || "Default description";
+  const defaultTitle = site?.siteMetadata?.title || "Default site title";
+  const author = site?.siteMetadata?.author || "Default author";
 
   return (
     <>
@@ -27,7 +29,7 @@ function Seo({ description, title, children }) {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta name="twitter:creator" content={author} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}

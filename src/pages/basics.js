@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout'; // Correct capitalization for the Layout component
+import Layout from '../components/layout';  
 
 const BasicsPage = () => (
   <Layout>

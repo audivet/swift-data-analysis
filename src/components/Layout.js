@@ -1,6 +1,6 @@
 import React from "react";
-import Navigation from "./Navigation";  // Ensure this file is correctly named and imported
-import "./layout.css";  // Ensure this CSS file exists in the same folder
+import Navigation from "./navigation";  // Correct lowercase import
+import "./layout.css";  // Ensure the file is named correctly and exists
 
 const Layout = ({ children }) => {
   return (
